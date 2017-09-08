@@ -11,5 +11,5 @@ tar -vxzf wordpress.tar.gz && \
 chown -R apache:apache /var/www
 EXPOSE 80
 VOLUME ["/sys/fs/cgroup","/var/www/html"]
-ENTRYPOINT ["http","-D","FOREGROUND"]
+ENTRYPOINT ["httpd","-D","FOREGROUND"]
 
